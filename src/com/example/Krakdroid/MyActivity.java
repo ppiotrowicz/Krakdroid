@@ -56,9 +56,7 @@ public class MyActivity extends Activity {
         v.put(KrakDroidContract.Submissions.SOLUTION_ID, solutionId);
 
 
-        Uri submission = KrakDroidContract.Submissions.buildSubmissionUri(solutionId);
-        Uri submitted = getContentResolver().insert(submission, new ContentValues());
-
-        Log.d("test", submitted.toString());
+        //Uri submission = KrakDroidContract.Submissions.buildSubmissionUri(solutionId);
+        Uri submitted = getContentResolver().insert(KrakDroidContract.Submissions.CONTENT_URI, v);
     }
 }
